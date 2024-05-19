@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <input type="text" id="name"><br>
+    <input type="password" name="" id="password">
+    <input type="submit" value="Submit" id="submit" onclick="add()">
+
+    <script>
+        function add(){
+            let name=document.getElementById("name").value
+            let password=document.getElementById("password").value
+
+            let token=localStorage.getItem("details");
+
+            let details
+
+            if(token==null){
+                details=[]
+            }
+            else{
+                details=JSON.parse("token")
+            }
+
+            console.log("token",token)
+
+            details.push(
+                {
+                    name:name,
+                    password:password
+                }
+            );
+            localStorage.setItem("ls_details",JSON.stringify(details))
+            // console.log("details")
+        }
+    </script>
+</body>
+</html>
+
+
+function toggleTask(checkbox) {
+    var taskname = checkbox.closest('.tasks').querySelector('h4');
+  
+    if (checkbox.checked) {
+      taskname.style.textDecoration = "line-through";
+      taskname.style.color= "gray";
+    } else {
+      taskname.style.textDecoration = "none";
+      taskname.style.color= "black";
+    }
+  }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasker</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <section>
+        <!-- loginpage -->
+        <div class="loginpage">
+            <div class="logo">
+                <img src="Assets/Logo pic.jpeg" alt="">
+            </div>
+
+            <!-- form -->
+            <div class="form">
+                <!-- heading -->
+                <h1>Welcome to Tasker</h1>
+                <h6>Please,insert your informations to access your tasks.</h6>
+                <!-- email -->
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="Email" placeholder="Insert your email"><br>
+                <!-- password -->
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="Password" placeholder="Insert your password"><br>
+                <!-- remember -->
+                <input type="checkbox" name="checkbox" id="Checkbox">
+                <label for="checkbox">Remember me</label><br>
+                <!-- incorrect -->
+                <p id="Paragraph">Incorrect or Invalid Email or Password</p>
+                <!-- sign in -->
+                <button id="Signin" onclick="page()">Sign In</button>
+                <!-- sign up -->
+                <h5>Don't have an account? <a href="signup.html" id="Signup">Sign Up</a> </h5>
+            </div>
+        </div>
+    </section>
+    <script src="signin.js"></script>
+</body>
+</html>
